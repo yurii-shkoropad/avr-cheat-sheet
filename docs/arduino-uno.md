@@ -1,6 +1,6 @@
 # Arduino uno
 
-It uses atmega328p under the hood.
+It uses [atmega328p](./atmega-328p.md) under the hood.
 
 ## Pinout
 
@@ -20,3 +20,7 @@ It uses atmega328p under the hood.
 | D13 | PB5 |Builtin Led|
 
 ![Pinout uno](/assets//pinout-uno.png)
+
+## Pull up resistor
+
+All pins has pull up resistors (need to set `DDRxn` low (input mode) and `PORTxn` high)
