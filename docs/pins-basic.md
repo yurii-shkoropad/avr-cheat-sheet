@@ -24,24 +24,24 @@ Register usually are 8 bits. So there are several way how to set and access them
 `DDRx` - Data Direction Register, `1` - output, `0` - input.`x` - port `B`, `D` or `C`.
 
 For example:
-`DDRD |= 1 << PD5;` - set only `PD5` as output on port `D`;
-`DDRD &= ~(1 << PD5);` - set only `PD5` as input on port `D`;
-`DDRB = 0x00` - set all as inputs on port `B`;
-`DDRB = 0xff` - set all as outputs on port `B`;
+- `DDRD |= 1 << PD5;` - set only `PD5` as output on port `D`;
+- `DDRD &= ~(1 << PD5);` - set only `PD5` as input on port `D`;
+- `DDRB = 0x00` - set all as inputs on port `B`;
+- `DDRB = 0xff` - set all as outputs on port `B`;
  
 ### Pin output (write)
 `PORTx` - PORT output register. Set output as high `1` or low `0`.`x` - port `B`, `D` or `C`.
 
 For example:
-`PORTD |= 1 << PD5;` - set only `PD5` to value `1` (high) on port `D`;
-`PORTD &= ~(1 << PD5);` - set only `PD5` to value `0` (low) on port `D`;
-`PORTB = 0x00` - set all as inputs as `0`s (low) on port `B`;
-`PORTB = 0xff` - set all as inputs as `1`s (high) on port `B`;
+- `PORTD |= 1 << PD5;` - set only `PD5` to value `1` (high) on port `D`;
+- `PORTD &= ~(1 << PD5);` - set only `PD5` to value `0` (low) on port `D`;
+- `PORTB = 0x00` - set all as inputs as `0`s (low) on port `B`;
+- `PORTB = 0xff` - set all as inputs as `1`s (high) on port `B`;
 
 
 ### Pin input (read)
 `PINx` - PIN input register. Read value on pin. `1` - high, `0` - low.`x` - port `B`, `D` or `C`.
 
 For example:
-`(PIND >> PD5) & 1;` - read `PD5` value on port `D`;
-`!((PIND >> PD5) & 1);` - read inverted `PD5` value on port `D`;
+- `(PIND >> PD5) & 1;` - read `PD5` value on port `D`;
+- `!((PIND >> PD5) & 1);` - read inverted `PD5` value on port `D`;
