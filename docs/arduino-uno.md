@@ -19,8 +19,22 @@ It uses [atmega328p](./atmega-328p.md) under the hood.
 | D12 | PB4 ||
 | D13 | PB5 |Builtin Led|
 
-![Pinout uno](/assets//pinout-uno.png)
+![Pinout uno](/assets/pinout-uno.png)
 
 ## Pull up resistor
 
-All pins has pull up resistors (need to set `DDRxn` low (input mode) and `PORTxn` high)
+All pins has pull up resistors (need to set pin as input mode and set high value)
+
+## Powering
+
+More details [here](https://docs.arduino.cc/learn/electronics/power-pins)
+
+### USB Connector
+
+Uno has usb connector type A/B
+
+![USB A/B](/assets/usb-ab.jpeg)
+
+Can be powered:
+- from laptop;
+- from power bank;
