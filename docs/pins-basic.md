@@ -1,4 +1,5 @@
 # Pins basic
+To access pins and registers to control pins use `avr/io.h` library.
 
 ## Access to pin bit
 `Pxn` - access to port `x` of  `n` pin bit.

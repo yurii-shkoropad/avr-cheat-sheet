@@ -2,14 +2,11 @@ CC=avr-gcc
 CFLAGS= -Os -DF_CPU=16000000UL -mmcu=atmega328p
 
 # Default target
-all: button.out
+all: main.out
 
 USBPORT=$(shell ls /dev/tty.usbmodem*)
-
-# $< - means input file (%.c)
-# $a - means target file (%.out)
-# %.out and %.c - mask for any file ending with   
-%.out: projects/%.c
+ 
+%.out: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
 %.hex: %.out
