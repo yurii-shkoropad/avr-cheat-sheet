@@ -6,7 +6,9 @@
 - [Arduino UNO](/docs/arduino-uno.md)
 - [Atmega328P](/docs/atmega-328p.md)
 - [Pins basic](/docs//pins-basic.md)
+- [Project](/docs//projects/readme.md)
 
+## Projects
 
 ## Useful tools
 - Hex to Binary converter [link](https://www.rapidtables.com/convert/number/hex-to-binary.html)

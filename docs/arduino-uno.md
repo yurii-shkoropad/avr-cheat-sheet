@@ -38,3 +38,9 @@ Uno has usb connector type A/B
 Can be powered:
 - from laptop;
 - from power bank;
+
+## Built-in LED
+
+Arduino has built-in led on PIN 13 (PB5)
+
+![Built-in led](../assets/built-in-led.jpg)
