@@ -8,7 +8,8 @@
 - [Pins basic](/docs//pins-basic.md)
 - [Project](/docs//projects/readme.md)
 
-## Projects
+## Makefile
+Example of makefile [link](/assets/Makefile).
 
 ## Useful tools
 - Hex to Binary converter [link](https://www.rapidtables.com/convert/number/hex-to-binary.html)

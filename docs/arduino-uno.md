@@ -41,6 +41,6 @@ Can be powered:
 
 ## Built-in LED
 
-Arduino has built-in led on PIN 13 (PB5)
+Arduino UNO has built-in LED on PIN 13 (PB5)
 
-![Built-in led](../assets/built-in-led.jpg)
+![Built-in LED](../assets/built-in-led.jpg)
