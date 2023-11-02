@@ -10,6 +10,7 @@
 - [Arduino UNO](/notes/arduino-uno.md)
 - [Atmega328P](/notes/atmega-328p.md)
 - [Pins basic](/notes/pins-basic.md)
+- [Resistor](/notes/resistor.md)
 
 ## Makefile
 Example of makefile [link](/assets/Makefile).
