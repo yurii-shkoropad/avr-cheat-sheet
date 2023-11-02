@@ -1,6 +1,10 @@
 # AVR Cheat sheet
 
-## Content 
+## Projects
+
+- [Built-in LED](./built-in-led/readme.md)
+
+## Notes 
 
 - [AVR Toolchain](/docs/avr-toolchain.md)
 - [Arduino UNO](/docs/arduino-uno.md)
