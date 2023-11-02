@@ -2,15 +2,14 @@
 
 ## Projects
 
-- [Built-in LED](./built-in-led/readme.md)
+- [Built-in LED](/projects/built-in-led/readme.md)
 
 ## Notes 
 
-- [AVR Toolchain](/docs/avr-toolchain.md)
-- [Arduino UNO](/docs/arduino-uno.md)
-- [Atmega328P](/docs/atmega-328p.md)
-- [Pins basic](/docs//pins-basic.md)
-- [Project](/docs//projects/readme.md)
+- [AVR Toolchain](/notes/avr-toolchain.md)
+- [Arduino UNO](/notes/arduino-uno.md)
+- [Atmega328P](/notes/atmega-328p.md)
+- [Pins basic](/notes/pins-basic.md)
 
 ## Makefile
 Example of makefile [link](/assets/Makefile).
