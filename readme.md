@@ -3,6 +3,7 @@
 ## Projects
 
 - [Built-in LED](/projects/built-in-led/readme.md)
+- [External LED](/projects/external-led/readme.md)
 
 ## Notes 
 
