@@ -6955,7 +6955,7 @@
   <line stroke="#418dd9" x1="154.462" stroke-width="1.6" x2="176.177" stroke-linecap="round" y1="136.051" y2="133.229"/>
  </g>
  <g partID="59540">
-  <line stroke="#000000" x1="212.063" stroke-width="3.2" x2="214.742" stroke-linecap="round" y1="161.972" y2="183.572"/>
-  <line stroke="#404040" x1="212.063" stroke-width="1.6" x2="214.742" stroke-linecap="round" y1="161.972" y2="183.572"/>
+  <line stroke="#000000" x1="240.862" stroke-width="3.2" x2="214.742" stroke-linecap="round" y1="161.972" y2="183.572"/>
+  <line stroke="#404040" x1="240.862" stroke-width="1.6" x2="214.742" stroke-linecap="round" y1="161.972" y2="183.572"/>
  </g>
 </svg>

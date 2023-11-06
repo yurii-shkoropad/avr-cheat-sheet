@@ -38,6 +38,17 @@ DDRB &= ~(1 << PB0);
 
 ![button pull up internal](/assets/button-internal-pull-up.svg)
 
+## Debounce button
+Push buttons often generate spurious open/close transitions when pressed, due to mechanical and physical issues: these transitions may be read as multiple presses in a very short time fooling the program.
+
+### Hardware debounce 
+RC filter fix
+-- add capacitor
+
+### Software debounce
+-- add timer interruptions
+-- add PCI interruption
+
 ## Schematic symbol
 
 ![button symbol](/assets/button-symbol.png)
