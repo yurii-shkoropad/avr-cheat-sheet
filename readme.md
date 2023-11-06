@@ -14,6 +14,7 @@
 - [Breadboard](/notes/breadboard.md)
 - [Resistor](/notes/resistor.md)
 - [LED](/notes/led.md)
+- [4 Pin button](/notes/4-pin-button.md)
 
 ## Makefile
 Example of makefile [link](/assets/Makefile).
