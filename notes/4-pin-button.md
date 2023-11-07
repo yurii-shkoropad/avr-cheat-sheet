@@ -29,12 +29,14 @@ So when button is not pressed, PIN will have 0, if pressed - 1.
 ![button pull down](/assets/button-pull-down.svg)
 
 ### Internal pull-up resistor
-Atmega328P micro controller (on Arduino UNO board) has built-in internal pull up resistor. To activate it, setup PIN in output mode and set value 1 on pin. For example
+Atmega328P micro controller (on Arduino UNO board) has built-in internal pull up resistor. To activate it, setup PIN in output mode and set value 1 on pin. For example:
 
 ```c
 PORTB |= 1 << PB0;
 DDRB &= ~(1 << PB0);
 ```
+
+So when button is not pressed, PIN will have 1, if pressed - 0.
 
 ![button pull up internal](/assets/button-internal-pull-up.svg)
 
@@ -42,10 +44,17 @@ DDRB &= ~(1 << PB0);
 Push buttons often generate spurious open/close transitions when pressed, due to mechanical and physical issues: these transitions may be read as multiple presses in a very short time fooling the program.
 
 ### Hardware debounce 
-RC filter fix
--- add capacitor
+The combination of a resistor and capacitor in this circuit is referred to as an RC filter. RC filters can be used to filter out different frequencies of electrical variation.
+
+Calculator for capacitor value [link](https://protological.com/debounce-calaculator/).
+100uF and 1kOm should be fine.
+
+So when button is not pressed, PIN will have 1, if pressed - 0.
+
+![button capacitor debounce](/assets/button-capacitor-debounce.svg)
 
 ### Software debounce
+TODO
 -- add timer interruptions
 -- add PCI interruption
 
