@@ -55,8 +55,6 @@ So when button is not pressed, PIN will have 1, if pressed - 0.
 
 ### Software debounce
 TODO
--- add timer interruptions
--- add PCI interruption
 
 ## Schematic symbol
 
