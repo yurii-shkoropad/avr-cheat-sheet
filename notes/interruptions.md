@@ -75,6 +75,7 @@ Timer/Counter 1:
 ### Normal Mode (Overflow Mode)
 In this mode, the timer/counter counts from 0 to its maximum value (255 for 8-bit timers and 65535 for 16-bit timers) and then overflows, generating an overflow interrupt (if enabled) and resetting the count. This mode is commonly used for basic timekeeping and interval timing.
 
+Example for Timer 0 (8 bit);
 ```c
 #include <avr/interrupt.h>
 
@@ -160,5 +161,5 @@ void setupTimer(void) {
 } 
 ```
 
-
 ## PCI interruption
+TBD

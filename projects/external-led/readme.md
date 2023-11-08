@@ -1,5 +1,5 @@
 # External led
-In this project external LED of Arduino UNO board will toggle.
+In this project external LED will toggle on Arduino UNO board.
 
 ## Circuit
 ![circuit](./circuit.svg)

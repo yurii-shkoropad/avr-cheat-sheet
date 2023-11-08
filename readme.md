@@ -4,6 +4,7 @@
 
 - [Built-in LED](/projects/built-in-led/readme.md)
 - [External LED](/projects/external-led/readme.md)
+- [External LED every second](/projects/external-led-every-second/readme.md)
 
 ## Notes 
 
