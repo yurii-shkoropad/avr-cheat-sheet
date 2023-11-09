@@ -13,6 +13,8 @@
 - [Atmega328P](/notes/atmega-328p.md)
 - [Pins basic](/notes/pins-basic.md)
 - [Interrupts](/notes/interruptions.md)
+- [Timer interruptions](/notes/timer-interruptions.md)
+- [External Interrupts](/notes/external-interruptions.md)
 - [Breadboard](/notes/breadboard.md)
 - [Resistor](/notes/resistor.md)
 - [LED](/notes/led.md)
