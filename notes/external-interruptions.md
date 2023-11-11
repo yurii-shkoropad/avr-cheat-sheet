@@ -26,7 +26,11 @@ The external interrupts are triggered by the INT0 and INT1 pins or any of the PC
 
 ## Registers
 - `EICRA` – External Interrupt Control Register A. Used for configuration `INT0` and `INT1`.
-- `EIMSK` – External Interrupt Mask Register. Used for enabling/disabled `INT0` and `INT1`.
+- `EIMSK` – External Interrupt Mask Register. Used for enabling/disabling `INT0` and `INT1`.
+- `PCMSK0` - Pin Change Mask Register 0. Used for enabling/disabling `PCINT` pins on `PCI0`.
+- `PCMSK1` - Pin Change Mask Register 1. Used for enabling/disabling `PCINT` pins on `PCI1`.
+- `PCMSK2` - Pin Change Mask Register 2. Used for enabling/disabling `PCINT` pins on `PCI2`.
+- `PCICR` – Pin Change Interrupt Control Register. Used for enabling/disabling `PCI0`, `PCI1` or `PCI2`.
 
 ## INT Interrupts
 These interrupts are triggered by a change in the state of the corresponding pin (rising or falling edge, or low level, depending on the configuration). `Atmega328P` has two `INT0` and `INT1` INT interrupts.
@@ -86,6 +90,36 @@ void setupExternalInterrupt(void) {
 The pin change interrupt will trigger if any enabled pin toggles. Cannot specify if trigger on rising of falling edge.
 `Atmega328P` has three `PCI0`, `PCI1`, `PCI2` PCI interrupts.
 
+### Example
+Example of PCINT0 (PCMSK0) interrupt on any state change
+```c
+#include <avr/interrupt.h>
+#include <avr/io.h>
 
+const int pciPin = PB0;
+
+// Interrupt Service Routine (ISR) for INT0
+ISR(PCINT0_vect) {
+  // will run on interrupt
+}
+
+void setupExternalInterrupt(void);
+
+int main(void) {
+  setupExternalInterrupt();
+
+  DDRB &= ~(_BV(pciPin)); // Read mode
+  PORTB |= _BV(pciPin); // Pull up resistor
+
+  while (1);
+}
+
+void setupExternalInterrupt(void) {
+  PCICR = (1 << PCIE0); // Enable PCI0
+  PCMSK0 |= _BV(PCINT0); // Enable PCINT0 (D8/PB0) on PCI0
+
+  sei();
+} 
+```
 
 
