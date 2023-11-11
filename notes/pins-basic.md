@@ -26,7 +26,9 @@ Register usually are 8 bits. So there are several way how to set and access them
 
 For example:
 - `DDRD |= 1 << PD5;` - set only `PD5` as output on port `D`;
+- `DDRD |= _BV(PD5);` - set only `PD5` as output on port `D` using util function;
 - `DDRD &= ~(1 << PD5);` - set only `PD5` as input on port `D`;
+- `DDRD &= ~_BV(PD5);` - set only `PD5` as input on port `D`;
 - `DDRB = 0x00` - set all as inputs on port `B`;
 - `DDRB = 0xff` - set all as outputs on port `B`;
  
@@ -35,7 +37,9 @@ For example:
 
 For example:
 - `PORTD |= 1 << PD5;` - set only `PD5` to value `1` (high) on port `D`;
+- `PORTD |= _BV(PD5);` - set only `PD5` to value `1` (high) on port `D` using util function;
 - `PORTD &= ~(1 << PD5);` - set only `PD5` to value `0` (low) on port `D`;
+- `PORTD &= ~_BV(PD5);` - set only `PD5` to value `0` (low) on port `D` using util function;;
 - `PORTB = 0x00` - set all as inputs as `0`s (low) on port `B`;
 - `PORTB = 0xff` - set all as inputs as `1`s (high) on port `B`;
 
@@ -46,3 +50,5 @@ For example:
 For example:
 - `(PIND >> PD5) & 1;` - read `PD5` value on port `D`;
 - `!((PIND >> PD5) & 1);` - read inverted `PD5` value on port `D`;
+- `bit_is_set(PIND, PD5);` - read `PD5` value on port `D` using utils function;
+- `bit_is_clear(PIND, PD5);` - read inverted `PD5` value on port `D` using utils function;

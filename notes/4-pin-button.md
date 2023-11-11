@@ -32,8 +32,8 @@ So when button is not pressed, PIN will have 0, if pressed - 1.
 Atmega328P micro controller (on Arduino UNO board) has built-in internal pull up resistor. To activate it, setup PIN in output mode and set value 1 on pin. For example:
 
 ```c
-PORTB |= 1 << PB0;
 DDRB &= ~(1 << PB0);
+PORTB |= 1 << PB0;
 ```
 
 So when button is not pressed, PIN will have 1, if pressed - 0.

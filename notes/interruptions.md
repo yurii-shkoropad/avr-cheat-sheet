@@ -16,4 +16,4 @@ Interrupts may not work as expected if there is no infinite loop or a mechanism 
 
 ## Interrupts types
 - [Timer interruptions](./timer-interruptions.md)
-- [External interruptions](./timer-interruptions.md)
+- [External interruptions](./external-interruptions.md)
