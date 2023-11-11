@@ -53,10 +53,15 @@ Timer/Counter 0:
 - `TIMER0_COMPA_vect` - CTC mode register A;
 
 Timer/Counter 1:
+- `TIMER1_OVF_vect` - Overflow mode;
 - `TIMER1_COMPA_vect` - CTC Mode Register A;
 
 ## Normal Mode (Overflow Mode)
-In this mode, the timer/counter counts from 0 to its maximum value (255 for 8-bit timers and 65535 for 16-bit timers) and then overflows, generating an overflow interrupt (if enabled) and resetting the count. This mode is commonly used for basic timekeeping and interval timing.
+In this mode, the timer/counter counts from 0 to its maximum value (`255` for 8-bit timers and `65535` for 16-bit timers) and then overflows, generating an overflow interrupt (if enabled) and resetting the count. This mode is commonly used for basic timekeeping and interval timing. 
+
+Keep in mind, if set same prescaler (for example `1024`) for `timer 0` and `timer 1`:
+- timer 1 will trigger interruption `~11ms` (255 / (16e6 / 1024)), 255 - 8bit, 16e6 - 16Mhz atmega328P clock and 1024 - prescaler
+- timer 1 will trigger interruption `~4.2s` (65536 / (16e6 / 1024)), 65536 - 16bit, 16e6 - 16Mhz atmega328P clock and 1024 - prescaler
 
 Example for Timer 0 (8 bit);
 ```c

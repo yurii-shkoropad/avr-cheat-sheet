@@ -54,7 +54,72 @@ So when button is not pressed, PIN will have 1, if pressed - 0.
 ![button capacitor debounce](/assets/button-capacitor-debounce.svg)
 
 ### Software debounce
-TODO
+Software debounce will check and ignore all changes in input state pin for specified time after state was change. Usually `50ms` should work. Precise debounce time can be achived with timers.
+
+```c
+#include <avr/interrupt.h>
+#include <avr/io.h>
+#include <stdbool.h>
+
+const int btnPin = PB0;
+
+void setupPins(void);
+void setupBtnInterrupts(void);
+void setupTimer(void);
+
+volatile bool btnWasPressed = false;
+volatile int counter = 0;
+volatile int btnCounter = 0;
+
+// Interrupt Service Routine (ISR) for INT0
+ISR(PCINT0_vect) {
+  bool btnPressed = bit_is_clear(PINB, btnPin);
+
+  if ((btnPressed != btnPressed) 
+    && (counter < (btnCounter + 4))) {
+    return;
+  }
+
+  if (!btnPressed && btnWasPressed) {
+    // do on something on btn pressed
+  }
+
+
+  btnWasPressed = btnPressed;
+  btnCounter = counter;
+}
+
+ISR(TIMER0_OVF_vect) {
+  counter++;
+}
+
+void setupExternalInterrupt(void);
+
+int main(void) {
+  setupPins();
+  setupBtnInterrupts();
+  setupTimer();
+
+  sei();
+
+  while (1);
+}
+
+void setupPins(void) {
+  DDRB &= ~_BV(btnPin);
+  PORTB |= _BV(btnPin); // Internal pull up resistor
+}
+
+void setupBtnInterrupts(void) {
+  PCICR = (1 << PCIE0); // Enable PCI0
+  PCMSK0 |= _BV(PCINT0) | _BV(PCINT1); // Enable PCINT0 (D8/PB0) and (D9/PB1) on PCI0
+} 
+
+void setupTimer(void) {
+  TIMSK0 |= (1 << TOIE0); // timer 0 normal mode (8 bit)
+  TCCR0B |= (1 << CS02) | (1 << CS00); // Set prescaler to 1024
+}
+```
 
 ## Schematic symbol
 

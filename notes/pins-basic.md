@@ -11,13 +11,24 @@ For example
 ## Working with registers
 Register usually are 8 bits. So there are several way how to set and access them.
 
-- Update all with binary. `DDRD = 0b00000000;` - set all 8 bits zero. `DDRD = 0b00000100;` - set all zeros, except 3rd bit as 1;
-- Update all with hexadecimal. `DDRD = 0x00;` - set all 8 bits zero. `DDRD = 0xff;` - set all bits as 1s;
-- Set `1` value to `1` bit. `DDRD |= 1 << PD5;` - set bit 5 (`PD5` pin 5 of port D) to `1`, other bits unchanged. `DDRD |= (1 << PD5) | (1 << PD4);` - set multiply at once;
-- Set `0` value to `1` bit. `DDRD &= ~(1 << PD5);` - set bit 5 (`PD5` pin 5 of port D) to `0`, other bits unchanged. `DDRD &= ~(1 << PD5 | 1 << PD4);` - set multiply at once;
-- Toggle value at `1` bit. `DDRD ^= 1 << PD5;` - toggle bit 5 (`PD5` pin 5 of port D), other bits unchanged. `DDRD ^= (1 << PD5) | (1 << PD4);` - toggle multiply at once;
-- Read `1` bit value. `PINB & (1 << PB4)` - return bit value (`PB4` - pin 4 of port B);
-- Read inverted `1` bit value. `!(PINB & (1 << PB4))` - return inverted bit value (`PB4` - pin 4 of port B);
+- `DDRD = 0b00000000;` - set all 8 bits zero with binary;
+- `DDRD = 0b00000100;` - set all zeros, except 3rd bit as 1 with binary;
+- `DDRD = 0x00;` - set all 8 bits zero with hexadecimal;
+- `DDRD = 0xff;` - set all bits as 1s with hexadecimal;
+- `DDRD |= 1 << PD5;` - set bit 5 (`PD5` pin 5 of port D) to `1`, other bits unchanged;
+- `DDRD |= _BV(PD5);` - set bit 5 (`PD5` pin 5 of port D) to `1`, other bits unchanged using util function;
+- `DDRD |= (1 << PD5) | (1 << PD4);` - set multiply at once;
+- `DDRD |= _BV(PD5) | _BV(PD4);` - set multiply at once using util function;
+- `DDRD &= ~(1 << PD5);` - set bit 5 (`PD5` pin 5 of port D) to `0`, other bits unchanged;
+- `DDRD &= ~_BV(PD5);` - set bit 5 (`PD5` pin 5 of port D) to `0`, other bits unchanged using util function;
+- `DDRD &= ~(1 << PD5 | 1 << PD4);` - set multiply at once;
+- `DDRD &= ~(_BV(PD5) | _BV(PD4));` - set multiply at once using util function;
+- `DDRD ^= 1 << PD5;` - toggle bit 5 (`PD5` pin 5 of port D), other bits unchanged;
+- `DDRD ^= (1 << PD5) | (1 << PD4);` - toggle multiply at once;
+- `PINB & (1 << PB4)` - return bit value (`PB4` - pin 4 of port B);
+- `bit_is_set(PINB, PB4);` - return bit value (`PB4` - pin 4 of port B) using util function;
+- `!(PINB & (1 << PB4))` - return inverted bit value (`PB4` - pin 4 of port B);
+- `bit_is_clear(PINB, PB4);` - return inverted bit value (`PB4` - pin 4 of port B) using util function;
 
 ## Pin Registers
 
@@ -26,9 +37,13 @@ Register usually are 8 bits. So there are several way how to set and access them
 
 For example:
 - `DDRD |= 1 << PD5;` - set only `PD5` as output on port `D`;
+- `DDRD |= (1 << PD5) | (1 << PD6);` - set `PD5` and `PD6` (others don't change) as output on port `D`;
 - `DDRD |= _BV(PD5);` - set only `PD5` as output on port `D` using util function;
+- `DDRD |= _BV(PD5) | _BV(PD6);` - set `PD5` and `PD6` (others don't change) as output on port `D` using util function;
 - `DDRD &= ~(1 << PD5);` - set only `PD5` as input on port `D`;
-- `DDRD &= ~_BV(PD5);` - set only `PD5` as input on port `D`;
+- `DDRD &= ~((1 << PD5) | (1 << PD6));` - set `PD5` and `PD6` (others don't change) as input on port `D`;
+- `DDRD &= ~_BV(PD5);` - set only `PD5` as input on port `D` using util function;
+- `DDRD &= ~(_BV(PD5) | _BV(PD6));` - set `PD5` and `PD6` (others don't change) as input on port `D` using util function;
 - `DDRB = 0x00` - set all as inputs on port `B`;
 - `DDRB = 0xff` - set all as outputs on port `B`;
  
