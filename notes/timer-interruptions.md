@@ -37,7 +37,7 @@ To set proper prescaler in `Timer/Counter 1` set next bits in `TCCR1B` register:
 ## Registers
 Timer/Counter 0: 
 - `TIMSK0` – Timer/Counter Interrupt Mask Register. This register used to set `Normal mode`, or `CTC mode` interruptions;
-- `TCCR0A` – Timer/Counter Control Register A. This register used to set `Normal mode` or `CTC mode`. Default is normal mode;
+- `TCCR0A` – Timer/Counter Control Register A. This register used to set `Normal mode`, `CTC mode` or `PWM`. Default is normal mode;
 - `TCCR0B` – Timer/Counter Control Register B. This register used to set `Prescaler`.
 - `OCR0A` - Output Compare Register A. When `CTC mode` enabled, will compare to this value. This is a 8bit register, so max value is `255`;
 
@@ -148,3 +148,22 @@ void setupTimer(void) {
   sei();
 } 
 ```
+
+## PWM (Pulse Width Modulation)
+Digital pin cannot reproduce analog value. Analogue value would be useful to control the brightness of an LED or the speed of a motor. Faking digital pin by switching on and off for fast speed can fake analog value.
+
+### Duty cycle
+Represents the ratio of time a signal is in an active or high state compared to the total period of the waveform.
+
+Duty Cycle = (Total Period / Active Time)×100%
+
+50% duty cycle means the LED is on for half the time and off for the other half, resulting in an average brightness level that is 50% of its maximum
+
+
+### Fast PWM
+Fast PWM is faster than phase correct PWM because fast PWM performs a single slope (i.e., up only) count. The output turns on when the timer is at 0, and turns off when the timer matches the output compare register. The higher the value in the output compare register, the higher the duty cycle.
+
+![Fast PWM](/assets/fast-pwm.gif)
+
+### Phase Correct PWM (non-Fast PWM)
+Phase correct PWM uses an up-then-down dual slope counting technique.
