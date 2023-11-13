@@ -67,3 +67,9 @@ For example:
 - `!((PIND >> PD5) & 1);` - read inverted `PD5` value on port `D`;
 - `bit_is_set(PIND, PD5);` - read `PD5` value on port `D` using utils function;
 - `bit_is_clear(PIND, PD5);` - read inverted `PD5` value on port `D` using utils function;
+
+
+## Floating Inputs
+When a digital input is left unconnected or is in a high-impedance state, it can "float" and pick up electrical noise. A pull-up or pull-down resistor provides a defined voltage level to ensure that the input is in a known state, either logic high or logic low. 
+
+How to handle this problem, details in [4 pin button](/notes/4-pin-button.md)
