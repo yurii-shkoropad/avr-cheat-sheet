@@ -16,6 +16,8 @@
 - [Interrupts](/notes/interruptions.md)
 - [Timer interruptions](/notes/timer-interruptions.md)
 - [External Interrupts](/notes/external-interruptions.md)
+- [SPI](/notes/spi.md)
+- [1 Wire](/notes/1-wire.md)
 
 ### Boards & Components
 - [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
@@ -24,10 +26,11 @@
 
 ### Components
 - [Breadboard](/notes/components/breadboard.md)
-- [Resistor](/notes/componentsresistor.md)
-- [LED](/notes/componentsled.md)
-- [Capacitor](/notes/componentscapacitor.md)
-- [4 Pin button](/notes/components4-pin-button.md)
+- [Resistor](/notes/components/resistor.md)
+- [LED](/notes/components/led.md)
+- [Capacitor](/notes/components/capacitor.md)
+- [4 Pin button](/notes/components/4-pin-button.md)
+- [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
 
 ## Makefile
 Example of makefile [link](/assets/Makefile).
