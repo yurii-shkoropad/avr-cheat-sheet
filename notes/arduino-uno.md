@@ -1,6 +1,7 @@
 # Arduino uno
-
 It uses [atmega328p](./atmega-328p.md) under the hood.
+
+Datasheet [link](./assets/arduino-uno-r3-datasheet.pdf).
 
 ## Pinout
 | Arduino pin | Atmega328P | Additional Functions | INT | PCINT | PCMSK | PWM |
@@ -42,4 +43,4 @@ Can be powered:
 
 Arduino UNO has built-in LED on PIN 13 (PB5)
 
-![Built-in LED](../assets/built-in-led.jpg)
+![Built-in LED](./assets/built-in-led.jpg)

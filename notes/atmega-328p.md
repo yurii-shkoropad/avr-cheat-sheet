@@ -1,6 +1,6 @@
 # Atmega-328p
 
-Link to data sheet - [link](../assets/atmega-328p-datasheet.pdf)
+Datasheet [link](./assets/atmega-328p-datasheet.pdf)
 
 ## Params
 
