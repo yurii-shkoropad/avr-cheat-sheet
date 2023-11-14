@@ -10,6 +10,7 @@
 
 ## Notes 
 
+### General
 - [AVR Toolchain](/notes/avr-toolchain.md)
 - [Arduino UNO](/notes/arduino-uno.md)
 - [Atmega328P](/notes/atmega-328p.md)
@@ -17,11 +18,13 @@
 - [Interrupts](/notes/interruptions.md)
 - [Timer interruptions](/notes/timer-interruptions.md)
 - [External Interrupts](/notes/external-interruptions.md)
-- [Breadboard](/notes/breadboard.md)
-- [Resistor](/notes/resistor.md)
-- [LED](/notes/led.md)
-- [Capacitor](/notes/capacitor.md)
-- [4 Pin button](/notes/4-pin-button.md)
+
+### Components
+- [Breadboard](/notes/components/breadboard.md)
+- [Resistor](/notes/componentsresistor.md)
+- [LED](/notes/componentsled.md)
+- [Capacitor](/notes/componentscapacitor.md)
+- [4 Pin button](/notes/components4-pin-button.md)
 
 ## Makefile
 Example of makefile [link](/assets/Makefile).
