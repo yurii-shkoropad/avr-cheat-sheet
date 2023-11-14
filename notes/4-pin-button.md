@@ -1,13 +1,13 @@
 # 4 pin button
 4 Pin Button has 4 pins. 
 
-![button](/assets/button.jpg)
+![button](./assets/button.jpg)
 
 # How it works
 Two pins on left connected, and two right connected when button is unpressed.
 When button is pressed left and right pins are connected.
 
-![button-connection](/assets/button-connection.png)
+![button-connection](./assets/button-connection.png)
 
 ## Floating Inputs
 When a digital input is left unconnected or is in a high-impedance state, it can "float" and pick up electrical noise. A pull-up or pull-down resistor provides a defined voltage level to ensure that the input is in a known state, either logic high or logic low.
@@ -17,7 +17,7 @@ Pull-up resistor ensures that the signal line remains at a known logic level whe
 
 So when button is not pressed, PIN will have 1, if pressed - 0.
 
-![button pull up](/assets/button-pull-up.svg)
+![button pull up](./assets/button-pull-up.svg)
 
 
 ### Pull-down resistor
@@ -26,7 +26,7 @@ Resistor value 4.7 kOm is perfect, but any from 1kOm to 10kOm will work.
 
 So when button is not pressed, PIN will have 0, if pressed - 1.
 
-![button pull down](/assets/button-pull-down.svg)
+![button pull down](./assets/button-pull-down.svg)
 
 ### Internal pull-up resistor
 Atmega328P micro controller (on Arduino UNO board) has built-in internal pull up resistor. To activate it, setup PIN in output mode and set value 1 on pin. For example:
@@ -38,7 +38,7 @@ PORTB |= 1 << PB0;
 
 So when button is not pressed, PIN will have 1, if pressed - 0.
 
-![button pull up internal](/assets/button-internal-pull-up.svg)
+![button pull up internal](./assets/button-internal-pull-up.svg)
 
 ## Debounce button
 Push buttons often generate spurious open/close transitions when pressed, due to mechanical and physical issues: these transitions may be read as multiple presses in a very short time fooling the program.
@@ -51,7 +51,7 @@ Calculator for capacitor value [link](https://protological.com/debounce-calacula
 
 So when button is not pressed, PIN will have 1, if pressed - 0.
 
-![button capacitor debounce](/assets/button-capacitor-debounce.svg)
+![button capacitor debounce](./assets/button-capacitor-debounce.svg)
 
 ### Software debounce
 Software debounce will check and ignore all changes in input state pin for specified time after state was change. Usually `50ms` should work. Precise debounce time can be achived with timers.
@@ -123,5 +123,5 @@ void setupTimer(void) {
 
 ## Schematic symbol
 
-![button symbol](/assets/button-symbol.png)
+![button symbol](./assets/button-symbol.png)
 

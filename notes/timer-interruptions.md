@@ -163,7 +163,7 @@ Duty Cycle = (Total Period / Active Time)×100%
 ### Fast PWM
 Fast PWM is faster than phase correct PWM because fast PWM performs a single slope (i.e., up only) count. The output turns on when the timer is at 0, and turns off when the timer matches the output compare register. The higher the value in the output compare register, the higher the duty cycle.
 
-![Fast PWM](/assets/fast-pwm.gif)
+![Fast PWM](./assets/fast-pwm.gif)
 
 ### Phase Correct PWM (non-Fast PWM)
 Phase correct PWM uses an up-then-down dual slope counting technique.

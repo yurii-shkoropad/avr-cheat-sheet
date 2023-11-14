@@ -1,7 +1,7 @@
 # Resistor
 Resistor is a passive component.
 
-![resistor](/assets/resistor.jpg)
+![resistor](./assets/resistor.jpg)
 
 ## Connection
 Has no polarity, which means can be connected in both ways.
@@ -11,4 +11,4 @@ Value of resistance can be checked by checking lines on resistor. Resistor calcu
 
  ## Schematic symbol
 
- ![resistor symbol](/assets/resistor-scheme.jpg)
+ ![resistor symbol](./assets/resistor-scheme.jpg)
