@@ -16,7 +16,7 @@ Prescaler is a divider that allows to reduce the clock frequency applied to the 
 To set proper prescaler in `Timer/Counter 0` set next bits in `TCCR0B` register:
 
 | CS02 | CS01 | CS00 | In hex | Description |
-|------|------|------|--------|-------------|
+| ---- | ---- | ---- | ------ | ----------- |
 | 0    | 0    | 1    | 0x01   | clk / 1     |
 | 0    | 1    | 0    | 0x02   | clk / 8     |
 | 0    | 1    | 1    | 0x03   | clk / 64    |
@@ -26,7 +26,7 @@ To set proper prescaler in `Timer/Counter 0` set next bits in `TCCR0B` register:
 To set proper prescaler in `Timer/Counter 1` set next bits in `TCCR1B` register:
 
 | CS12 | CS11 | CS10 | In hex | Description |
-|------|------|------|--------|-------------|
+| ---- | ---- | ---- | ------ | ----------- |
 | 0    | 0    | 1    | 0x01   | clk / 1     |
 | 0    | 1    | 0    | 0x02   | clk / 8     |
 | 0    | 1    | 1    | 0x03   | clk / 64    |

@@ -2,20 +2,20 @@
 The external interrupts are triggered by the INT0 and INT1 pins or any of the PCINT23..0 pins when a pin changes its logical state. Observe that, if enabled, the interrupts will trigger even if the INT0 and INT1 or PCINT23..0 pins are configured as outputs. 
 
 ## Pins
-| Arduino pin | Atmega328P | INT | PCINT | PCMSK |
-| --- | --- | --- | --- | --- |
-| D2 | PD2 | INT0 | PCINT18 | PCMSK2 |
-| D3 | PD3 | INT0 | PCINT19 | PCMSK2 |
-| D4 | PD4 | | PCINT20 | PCMSK2 |
-| D5 | PD5 | | PCINT21 | PCMSK2 |
-| D6 | PD6 | | PCINT22 | PCMSK2 |
-| D7 | PD7 | | PCINT23 | PCMSK2 |
-| D8 | PB0 | | PCINT0 | PCMSK0 |
-| D9 | PB1 | | PCINT1 | PCMSK0 |
-| D10 | PB2 | | PCINT2 | PCMSK0 |
-| D11 | PB3 | | PCINT3 | PCMSK0 |
-| D12 | PB4 | | PCINT4 | PCMSK0 |
-| D13 | PB5 | | PCINT5 | PCMSK0 |
+| Arduino pin | Atmega328P | INT  | PCINT   | PCMSK  |
+| ----------- | ---------- | ---- | ------- | ------ |
+| D2          | PD2        | INT0 | PCINT18 | PCMSK2 |
+| D3          | PD3        | INT0 | PCINT19 | PCMSK2 |
+| D4          | PD4        |      | PCINT20 | PCMSK2 |
+| D5          | PD5        |      | PCINT21 | PCMSK2 |
+| D6          | PD6        |      | PCINT22 | PCMSK2 |
+| D7          | PD7        |      | PCINT23 | PCMSK2 |
+| D8          | PB0        |      | PCINT0  | PCMSK0 |
+| D9          | PB1        |      | PCINT1  | PCMSK0 |
+| D10         | PB2        |      | PCINT2  | PCMSK0 |
+| D11         | PB3        |      | PCINT3  | PCMSK0 |
+| D12         | PB4        |      | PCINT4  | PCMSK0 |
+| D13         | PB5        |      | PCINT5  | PCMSK0 |
 
 ## Vectors
 - `INT0_vect` - INT interrupt for `INT0`
@@ -39,20 +39,20 @@ These interrupts are triggered by a change in the state of the corresponding pin
 Use `EICRA` register to set `INT` interrupts.
 
 For `INT0` 
-| ISC01 | ISC00 | Description |
-| --- | --- | --- |
-| 0 | 0 | The low level of INT1 generates an interrupt request. |
-| 0 | 1 | Any logical change on INT1 generates an interrupt request. |
-| 1 | 0 | The falling edge of INT1 generates an interrupt request. |
-| 1 | 1 | The rising edge of INT1 generates an interrupt request. |
+| ISC01 | ISC00 | Description                                                |
+| ----- | ----- | ---------------------------------------------------------- |
+| 0     | 0     | The low level of INT1 generates an interrupt request.      |
+| 0     | 1     | Any logical change on INT1 generates an interrupt request. |
+| 1     | 0     | The falling edge of INT1 generates an interrupt request.   |
+| 1     | 1     | The rising edge of INT1 generates an interrupt request.    |
 
 For `INT1` 
-| ISC11 | ISC10 | Description |
-| --- | --- | --- |
-| 0 | 0 | The low level of INT1 generates an interrupt request. |
-| 0 | 1 | Any logical change on INT1 generates an interrupt request. |
-| 1 | 0 | The falling edge of INT1 generates an interrupt request. |
-| 1 | 1 | The rising edge of INT1 generates an interrupt request. |
+| ISC11 | ISC10 | Description                                                |
+| ----- | ----- | ---------------------------------------------------------- |
+| 0     | 0     | The low level of INT1 generates an interrupt request.      |
+| 0     | 1     | Any logical change on INT1 generates an interrupt request. |
+| 1     | 0     | The falling edge of INT1 generates an interrupt request.   |
+| 1     | 1     | The rising edge of INT1 generates an interrupt request.    |
 
 ### Example 
 Example of INT0 interrupt on falling edge

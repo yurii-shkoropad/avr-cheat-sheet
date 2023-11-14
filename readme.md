@@ -12,13 +12,15 @@
 
 ### General
 - [AVR Toolchain](/notes/avr-toolchain.md)
-- [Arduino UNO](/notes/arduino-uno.md)
-- [Atmega328P](/notes/atmega-328p.md)
 - [Pins basic](/notes/pins-basic.md)
 - [Interrupts](/notes/interruptions.md)
 - [Timer interruptions](/notes/timer-interruptions.md)
 - [External Interrupts](/notes/external-interruptions.md)
-- [ESP8266](/notes/esp8266.md)
+
+### Boards & Components
+- [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
+- [Arduino UNO](/notes/board-and-microcontollers/arduino-uno.md)
+- [ESP8266](/notes/board-and-microcontollers/esp8266.md)
 
 ### Components
 - [Breadboard](/notes/components/breadboard.md)
