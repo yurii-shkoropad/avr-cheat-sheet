@@ -18,6 +18,7 @@
 - [Interrupts](/notes/interruptions.md)
 - [Timer interruptions](/notes/timer-interruptions.md)
 - [External Interrupts](/notes/external-interruptions.md)
+- [ESP8266](/notes/esp8266.md)
 
 ### Components
 - [Breadboard](/notes/components/breadboard.md)
