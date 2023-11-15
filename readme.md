@@ -11,6 +11,7 @@
 ## Notes 
 
 ### General
+- [General](/notes/general.md)
 - [AVR Toolchain](/notes/avr-toolchain.md)
 - [Pins basic](/notes/pins-basic.md)
 - [Interrupts](/notes/interruptions.md)

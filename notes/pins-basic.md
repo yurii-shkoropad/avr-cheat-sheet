@@ -68,6 +68,10 @@ For example:
 - `bit_is_set(PIND, PD5);` - read `PD5` value on port `D` using utils function;
 - `bit_is_clear(PIND, PD5);` - read inverted `PD5` value on port `D` using utils function;
 
+Sometimes it's useful to wait until pin will change it's from one to another value, especially when working with `1-Wire` protocol. There are two useful commands `loop_until_bit_is_clear` and `loop_until_bit_is_set`:
+- `loop_until_bit_is_clear(PIND, PD7)` - will wait unit bit `PD7` in port `PORTD` will become low;
+- `loop_until_bit_is_set(PIND, PD7)` - will wait unit bit `PD7` in port `PORTD` will become high;
+
 
 ## Floating Inputs
 When a digital input is left unconnected or is in a high-impedance state, it can "float" and pick up electrical noise. A pull-up or pull-down resistor provides a defined voltage level to ensure that the input is in a known state, either logic high or logic low. 
