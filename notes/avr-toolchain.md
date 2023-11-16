@@ -44,17 +44,6 @@ $ avr-gcc Os -DF_CPU=16000000UL -mmcu=atmega328p test.c -o test.out
 ## avrdude
 `avrdude` - flashes firmware `%.hex` file to usb port.
 
-
-### Serial Port
-When flashing firmware, need to specify serial port on which micro controller is connected:
-- Windows - `COM3`;
-- Linux - `/dev/ttyUSB0`;
-- MacOS - `/dev/tty.usbmodem1421` or `/dev/tty.usbserial`;
-
-### Baud rate 
-Baud rate - at which speed firmware will be flashed. Different micro controllers has different baud rates. 
-- `ATMEGA328P` - 115200;
-
 Flags:
 - `-F` - force;
 - `-V` - verbose;

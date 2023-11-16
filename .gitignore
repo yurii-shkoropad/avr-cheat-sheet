@@ -3,4 +3,5 @@
 notes.md
 *.out
 
-projects/test
+projects/avr/test
+projects/micropython/test

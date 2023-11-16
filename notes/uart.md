@@ -12,7 +12,7 @@ Perfect video which explains UART protocol [link](https://www.youtube.com/watch?
 
 `$ screen -ls` - list all sessions
 
-`$screen /dev/cu.usbserial-XXXX 9600` - attach session to device
+`$ screen /dev/cu.usbserial-XXXX 9600` - attach session to device
 
 `CTRL+A → CTRL+K` - stop session
 

@@ -8,10 +8,10 @@ Datasheet [link](./assets/atmega-328p-datasheet.pdf)
 ![atmega328p pinout](./assets/atmega328-pins.png)
 
 ## Params
-| Parameter | Value |
-| --- | --- |
-| CPU type | 8-bit |
-| CPU speed | 16MHz |
+| Parameter    | Value |
+| ------------ | ----- |
+| CPU type     | 8-bit |
+| CPU speed    | 16MHz |
 | Flash memory | 32 KB |
 
 ## Ports

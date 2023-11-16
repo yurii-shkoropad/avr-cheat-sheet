@@ -1,12 +1,14 @@
 # AVR Cheat sheet
 
 ## Projects
+### AVR
+- [Built-in LED](/projects/avr/built-in-led/readme.md)
+- [External LED](/projects/avr/external-led/readme.md)
+- [External LED every second](/projects/avr/external-led-every-second/readme.md)
+- [BCD Timer start stop](/projects/avr/bcd-timer-start-stop/readme.md)
+- [Led Dimmer](/projects/avr/led-dimmer/readme.md)
+### Micropython
 
-- [Built-in LED](/projects/built-in-led/readme.md)
-- [External LED](/projects/external-led/readme.md)
-- [External LED every second](/projects/external-led-every-second/readme.md)
-- [BCD Timer start stop](/projects/bcd-timer-start-stop/readme.md)
-- [Led Dimmer](/projects/led-dimmer/readme.md)
 
 ## Notes 
 
