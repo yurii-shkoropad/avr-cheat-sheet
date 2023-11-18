@@ -8,13 +8,10 @@ Perfect video which explains UART protocol [link](https://www.youtube.com/watch?
 [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor)
 
 ### Using screen tool
-`$ ls /dev/cu.*` - find device
-
-`$ screen -ls` - list all sessions
-
-`$ screen /dev/cu.usbserial-XXXX 9600` - attach session to device
-
-`CTRL+A → CTRL+K` - stop session
+- `$ ls /dev/cu.*` - find device;
+- `$ screen -ls` - list all sessions;
+- `$ screen /dev/cu.usbserial-XXXX 9600` - attach session to device, (`115200` for esp32);
+- `CTRL+A → CTRL+K` - stop session;
 
 
 ## USART

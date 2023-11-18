@@ -7,8 +7,6 @@
 - [External LED every second](/projects/avr/external-led-every-second/readme.md)
 - [BCD Timer start stop](/projects/avr/bcd-timer-start-stop/readme.md)
 - [Led Dimmer](/projects/avr/led-dimmer/readme.md)
-### Micropython
-
 
 ## Notes 
 
@@ -32,7 +30,8 @@
 - [Resistor](/notes/components/resistor.md)
 - [LED](/notes/components/led.md)
 - [Capacitor](/notes/components/capacitor.md)
-- [4 Pin button](/notes/components/4-pin-button.md)
+- [4 pin button](/notes/components/4-pin-button.md)
+- [7 segment display](/notes//components/seven-segment-display.md)
 - [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
 
 ## Makefile
