@@ -34,9 +34,6 @@
 - [7 segment display](/notes//components/seven-segment-display.md)
 - [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
 
-## Makefile
-Example of makefile [link](/assets/Makefile).
-
 ## Useful tools
 - [Hex to Binary converter](https://www.rapidtables.com/convert/number/hex-to-binary.html)
 - [Resistor calculator](https://www.calculator.net/resistor-calculator.html)
