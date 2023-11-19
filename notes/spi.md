@@ -29,5 +29,67 @@ Practice of connecting multiple devices in series, where the output of one devic
 ## Implementation
 
 ### Software
+Using 74hc595 and 7 segment display:
+
+Program
+```c
+#include <avr/io.h>
+#include <util/delay.h>
+
+const uint8_t dataPin = PD5; // PICO, MOSI
+const uint8_t sckPin = PD6; // Serial clock
+const uint8_t latchPin = PD7; // SS
+
+const uint8_t numbers[] = {
+  0b00111111, // 0
+  0b00000110, // 1
+  0b01011011, // 2
+  0b01001111, // 3
+  0b01100110, // 4
+  0b01101101, // 5
+  0b01111101, // 6
+  0b00000111, // 7
+  0b01111111, // 8
+  0b01101111  // 9
+};
+
+void setupPins(void);
+void drawDisplay(uint8_t data);
+void shiftOutM(int val);
+void shiftOut(uint8_t data);
+
+int main(void) {
+  setupPins();
+  drawDisplay(numbers[4]);
+}
+
+void setupPins(void) {
+  DDRD |= _BV(dataPin) | _BV(sckPin) | _BV(latchPin);
+}
+
+void drawDisplay(uint8_t data) {
+  shiftOut(data); // 7 segment with common anode, LSB
+
+  PORTD |= _BV(latchPin);
+  _delay_us(1);
+  PORTD &= ~_BV(latchPin);
+  _delay_us(1);
+}
+
+void shiftOut(uint8_t data) {
+  for (int8_t i = 7; i >= 0; i--) {
+    if (bit_is_set(data, i)) {
+      PORTD |= _BV(dataPin);
+    } else {
+      PORTD &= ~_BV(dataPin);
+    }
+
+    PORTD |= _BV(sckPin);
+    _delay_us(1);
+    PORTD &= ~_BV(sckPin);
+    _delay_us(1);
+  }
+}
+```
 
 ### Hardware
