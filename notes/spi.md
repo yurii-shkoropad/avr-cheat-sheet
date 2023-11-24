@@ -55,7 +55,6 @@ const uint8_t numbers[] = {
 
 void setupPins(void);
 void drawDisplay(uint8_t data);
-void shiftOutM(int val);
 void shiftOut(uint8_t data);
 
 int main(void) {
@@ -93,3 +92,59 @@ void shiftOut(uint8_t data) {
 ```
 
 ### Hardware
+
+- `SPCR` – SPI Control Register, enable `SPI`, set master/slave mode, set clock speed;
+- `SPDR` – SPI Data Register. The SPI data register is a read/write register used for data transfer between the register file and the SPI shift register;
+- `SPSR` – SPI Status Register. When a serial transfer is complete, the SPIF Flag is set;
+
+
+```c
+#include <avr/io.h>
+#include <util/delay.h>
+
+const uint8_t dataPin = PB3; // PICO, MOSI
+const uint8_t sckPin = PB5; // Serial clock
+const uint8_t latchPin = PB2; // SS
+
+const uint8_t numbers[] = {
+  0b00111111, // 0
+  0b00000110, // 1
+  0b01011011, // 2
+  0b01001111, // 3
+  0b01100110, // 4
+  0b01101101, // 5
+  0b01111101, // 6
+  0b00000111, // 7
+  0b01111111, // 8
+  0b01101111  // 9
+};
+
+void setup(void);
+void drawDisplay(uint8_t data);
+void SPI_MasterTransmit(uint8_t data);
+
+int main(void) {
+  setup();
+  drawDisplay(numbers[7]);
+}
+
+void setup(void) {
+  DDRB |= _BV(dataPin) | _BV(sckPin) | _BV(latchPin);
+
+  SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR0); // Enable SPI, MSTR - MOSI, fck/16
+}
+
+void drawDisplay(uint8_t data) {
+  SPI_MasterTransmit(data); // 7 segment with common anode, LSB
+
+  PORTB |= _BV(latchPin);
+  _delay_us(1);
+  PORTB &= ~_BV(latchPin);
+  _delay_us(1);
+}
+
+void SPI_MasterTransmit(uint8_t data) {
+  SPDR = data;
+  while(bit_is_clear(SPSR, SPIF));
+}
+```

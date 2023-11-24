@@ -42,7 +42,12 @@ Pin numbering is counter-clockwise. Notch in the package is at the top.
 
 ## C Notes
 - `volatile` - keyword to specify do not optimize variable. Useful with interrupts. Example `volatile uint8_t bcdCounter = 0;`
-- `snprintf` - defined in `<stdio.h>`,  formats and stores a series of characters and values in the array buffer. Useful to get string with integer
+- `snprintf` - defined in `<stdio.h>`,  formats and stores a series of characters and values in the array buffer. Useful to get string with integer. Example:
+```c
+  char buffer[30];
+  snprintf(buffer, sizeof(buffer), "i=%d\r\n", i);
+  printUSARTString(buffer);
+```
 
 ### Specifiers
 | Specifier | Used for                                           |

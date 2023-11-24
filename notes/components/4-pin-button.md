@@ -3,7 +3,7 @@
 
 ![button](./assets/button.jpg)
 
-# How it works
+## How it works
 Two pins on left connected, and two right connected when button is unpressed.
 When button is pressed left and right pins are connected.
 
@@ -49,7 +49,9 @@ The combination of a resistor and capacitor in this circuit is referred to as an
 Calculator for capacitor value [link](https://protological.com/debounce-calaculator/).
 100uF and 1kOm should be fine.
 
-So when button is not pressed, PIN will have 1, if pressed - 0.
+So when button is not pressed, PIN will have 0, if pressed - 1.
+
+**This Approach will not work for two buttons parallel. Prefer software debounce**
 
 ![button capacitor debounce](./assets/button-capacitor-debounce.svg)
 
@@ -125,3 +127,71 @@ void setupTimer(void) {
 
 ![button symbol](./assets/button-symbol.png)
 
+## Long Press/Short press
+It's useful to use only one button, button for different functions, by difirintiating different presses for example by long or short press
+
+Code example:
+```c
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <stdio.h>
+#include <stdbool.h>
+
+const int btnPin = PD2;
+volatile int counter = 0;
+
+enum BtnPressType {
+  SHORT_PRESS,
+  LONG_PRESS
+};
+
+ISR(INT0_vect) {
+  static int btnCounter = 0;
+  static bool wasPressed = false;
+
+  if (counter < btnCounter + 5) {
+    return;
+  }
+
+  bool isPressed = bit_is_clear(PIND, btnPin); // button is high when not pressed
+
+  if (wasPressed && !isPressed) {
+    enum BtnPressType pressType =  counter - btnCounter > 15 ? LONG_PRESS : SHORT_PRESS;
+  }
+
+  btnCounter = counter;
+  wasPressed = isPressed;
+}
+
+ISR(TIMER0_OVF_vect) {
+  counter++;
+}
+
+void setup(void);
+void setupButton(void);
+
+int main(void) {
+  setup();
+
+  while (1);
+}
+
+void setup(void) {
+  setupButtons();
+}
+
+void setupButton(void) {
+  DDRD &= ~_BV(btnPin);
+  PORTD |= _BV(btnPin);
+
+  // External Interrupt INT0
+  EIMSK |= _BV(INT0);
+  EICRA |= _BV(ISC00);
+
+  // Timer 0, 1024 prescaler, normal mode, 8-bit
+  TIMSK0 |= (1 << TOIE0);
+  TCCR0B |= (1 << CS02) | (1 << CS00);
+
+  sei();
+}
+```

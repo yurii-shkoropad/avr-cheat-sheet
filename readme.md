@@ -18,6 +18,8 @@
 - [Timer interruptions](/notes/timer-interruptions.md)
 - [External Interrupts](/notes/external-interruptions.md)
 - [SPI](/notes/spi.md)
+- [Analog to Digital Converter](/notes/adc.md)
+- [Voltage divider](/notes/volatage-divider.md)
 - [1 Wire](/notes/1-wire.md)
 
 ### Boards & Components
@@ -34,9 +36,11 @@
 - [7 segment display](/notes//components/seven-segment-display.md)
 - [Shift register](/notes/components//shift-register.md)
 - [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
+- [Thermistor](/notes/components/thermistor.md)
 
 ## Useful tools
 - [Hex to Binary converter](https://www.rapidtables.com/convert/number/hex-to-binary.html)
 - [Resistor calculator](https://www.calculator.net/resistor-calculator.html)
 - [LED ballast resistor](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-led-series-resistor)
 - [Debounce calculator](https://protological.com/debounce-calaculator/)
+- [Voltage divider calculator](https://ohmslawcalculator.com/voltage-divider-calculator)
