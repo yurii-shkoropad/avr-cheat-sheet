@@ -145,22 +145,30 @@ enum BtnPressType {
   LONG_PRESS
 };
 
-ISR(INT0_vect) {
+enum BtnPressType detectButton(uint8_t btnPin) {
   static int btnCounter = 0;
   static bool wasPressed = false;
 
-  if (counter < btnCounter + 5) {
-    return;
-  }
-
   bool isPressed = bit_is_clear(PIND, btnPin); // button is high when not pressed
 
-  if (wasPressed && !isPressed) {
-    enum BtnPressType pressType =  counter - btnCounter > 15 ? LONG_PRESS : SHORT_PRESS;
+  if (msCounter < (btnCounter + 5)) {
+    return NOT_PRESSED;
   }
 
-  btnCounter = counter;
+  enum BtnPressType pressType = NOT_PRESSED;
+  if (wasPressed && !isPressed) {
+    pressType =  msCounter - btnCounter > 50 ? LONG_PRESS : SHORT_PRESS;
+    return pressType;
+  }
+
+  btnCounter = msCounter;
   wasPressed = isPressed;
+
+  return pressType;
+}
+
+ISR(INT0_vect) {
+  enum BtnPressType pressType = detectButton(btnPin);
 }
 
 ISR(TIMER0_OVF_vect) {

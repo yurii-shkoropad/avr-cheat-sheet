@@ -7,6 +7,7 @@
 - [External LED every second](/projects/avr/external-led-every-second/readme.md)
 - [BCD Timer start stop](/projects/avr/bcd-timer-start-stop/readme.md)
 - [Led Dimmer](/projects/avr/led-dimmer/readme.md)
+- [Counter](/projects/avr/counter/readme.md)
 
 ## Notes 
 

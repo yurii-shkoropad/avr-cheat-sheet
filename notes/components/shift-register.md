@@ -163,3 +163,35 @@ void SPI_MasterTransmit(uint8_t data) {
   while(bit_is_clear(SPSR, SPIF));
 }
 ```
+
+
+### Daisy chain
+Daisy chaining shift registers is a common technique used in digital electronics to expand the number of available output or input pins on a microcontroller or other digital device
+
+![Daisy chain](./assets/shift-register-daisy-chain.svg)
+
+Code sample
+
+```c
+void setupSPI(void) {
+  DDRB |= _BV(dataPin) | _BV(sckPin) | _BV(latchPin);
+
+  SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR0); // Enable SPI, MSTR - MOSI, fck/16
+}
+
+void SPI_MasterTransmit(uint8_t data) {
+  SPDR = data;
+  while(bit_is_clear(SPSR, SPIF));
+}
+
+void drawDisplay() {
+  // First transmit will end up in 2nd shift register
+  SPI_MasterTransmit(0b11111111);
+  SPI_MasterTransmit(0b00000000); 
+
+  PORTB |= _BV(latchPin);
+  _delay_us(1);
+  PORTB &= ~_BV(latchPin);
+  _delay_us(1);
+}
+```

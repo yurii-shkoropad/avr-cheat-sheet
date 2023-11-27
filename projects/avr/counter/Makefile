@@ -1,5 +1,7 @@
+.PHONY: clean
+
 CC=avr-gcc
-CFLAGS= -Os -DF_CPU=16000000UL -mmcu=atmega328p
+CFLAGS= -Os -DF_CPU=16000000UL -mmcu=atmega328p -Wl,-u,vfprintf -lprintf_flt -lm
 
 # Default target
 all: main.out
@@ -20,3 +22,5 @@ install.%: %.hex
 
 clean:
 	rm -f *.hex *.o
+
+# Run $ make -B install.main
