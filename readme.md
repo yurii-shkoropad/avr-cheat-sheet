@@ -36,6 +36,7 @@
 - [4 pin button](/notes/components/4-pin-button.md)
 - [7 segment display](/notes//components/seven-segment-display.md)
 - [Shift register](/notes/components//shift-register.md)
+- [Led matrix](/notes/components/led-matrix.md)
 - [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
 - [Thermistor](/notes/components/thermistor.md)
 
