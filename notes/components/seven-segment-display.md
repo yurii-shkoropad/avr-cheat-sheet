@@ -85,7 +85,8 @@ void drawDisplay(uint8_t data) {
 ```
 
 ### Common Anode
-`5161BS` - Common Anode (+)
+`5161BS` - Common Anode (+) (1 digit)
+`5461BS` - Common Anode (+) (4 digit)
 
 ![Common Anode](./assets/seven-segment-anode.png)
 

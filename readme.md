@@ -23,7 +23,7 @@
 - [Voltage divider](/notes/volatage-divider.md)
 - [1 Wire](/notes/1-wire.md)
 
-### Boards & Components
+### Boards & MCUs
 - [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
 - [Arduino UNO](/notes/board-and-microcontollers/arduino-uno.md)
 - [ESP8266](/notes/board-and-microcontollers/esp8266.md)
@@ -37,6 +37,7 @@
 - [7 segment display](/notes//components/seven-segment-display.md)
 - [Shift register](/notes/components//shift-register.md)
 - [Led matrix](/notes/components/led-matrix.md)
+- [MAX7219](/notes/components/max7219.md)
 - [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
 - [Thermistor](/notes/components/thermistor.md)
 

@@ -4,13 +4,22 @@ A Capacitor is a passive component that has the ability to store the energy in t
 ![capacitor](./assets/capacitor.jpg)
 
 ## Polarized capacitor
-A polarized capacitor is a type of electrolytic capacitor that has a specific polarity or direction in which it must be connected in a circuit.
+A polarized capacitor is a type of capacitor that has a specific polarity or direction in which it must be connected in a circuit. Electrolytic capacitors are polarized capacitors.
 
 ![capacitor-polarity](./assets/capacitor-polarity.webp)
 
-## Schematic symbol
+### Schematic symbol
 
-### Polarized capacitor
 ![polarized capacitor symbol](./assets/polarized-capacitor-symbol.png)
 
 ![polarized capacitor symbol 2](./assets/polarized-capacitor-symbol-2.png)
+
+## Non-Polarized capacitor
+Non-polarized capacitors are capacitors that do not have a specific polarity; in other words, they can be connected to a circuit in either direction. Unlike polarized capacitors, non-polarized capacitors do not have a positive and a negative lead.
+
+![ceramic capacitor](./assets/ceramic-capacitor.jpeg)
+
+### Schematic symbol
+
+![capacitor symbol](./assets/capacitor-symbol.png)
+
