@@ -30,6 +30,7 @@
 - [LED](/notes/components/led.md)
 - [Capacitor](/notes/components/capacitor.md)
 - [4 pin button](/notes/components/4-pin-button.md)
+- [Potentiometer](/notes/components/potentiometer.md)
 - [7 segment display](/notes//components/seven-segment-display.md)
 - [Shift register](/notes/components//shift-register.md)
 - [Led matrix](/notes/components/led-matrix.md)
