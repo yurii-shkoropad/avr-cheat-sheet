@@ -34,7 +34,7 @@
 - [Shift register](/notes/components//shift-register.md)
 - [Led matrix](/notes/components/led-matrix.md)
 - [MAX7219](/notes/components/max7219.md)
-- [AM2302/DHT22 Temperature/Humidity Sensor](/notes/components/am2302.md)
+- [DHT22 Temperature/Humidity Sensor](/notes/components/dht22.md)
 - [Thermistor](/notes/components/thermistor.md)
 
 ## Useful tools
