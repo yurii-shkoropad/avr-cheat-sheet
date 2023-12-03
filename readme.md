@@ -1,17 +1,18 @@
 # AVR Cheat sheet
 
 ## Projects
-### AVR
-- [Built-in LED](/projects/avr/built-in-led/readme.md)
-- [External LED](/projects/avr/external-led/readme.md)
-- [External LED every second](/projects/avr/external-led-every-second/readme.md)
-- [BCD Timer start stop](/projects/avr/bcd-timer-start-stop/readme.md)
-- [Led Dimmer](/projects/avr/led-dimmer/readme.md)
-- [Counter](/projects/avr/counter/readme.md)
+- [Built-in LED](/projects/built-in-led/readme.md)
+- [External LED](/projects/external-led/readme.md)
+- [External LED every second](/projects/external-led-every-second/readme.md)
+- [BCD Timer start stop](/projects/bcd-timer-start-stop/readme.md)
+- [Led Dimmer](/projects/led-dimmer/readme.md)
+- [Counter](/projects/counter/readme.md)
 
 ## Notes 
 
 ### General
+- [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
+- [Arduino UNO](/notes/board-and-microcontollers/arduino-uno.md)
 - [General](/notes/general.md)
 - [AVR Toolchain](/notes/avr-toolchain.md)
 - [Pins basic](/notes/pins-basic.md)
@@ -22,11 +23,6 @@
 - [Analog to Digital Converter](/notes/adc.md)
 - [Voltage divider](/notes/volatage-divider.md)
 - [1 Wire](/notes/1-wire.md)
-
-### Boards & MCUs
-- [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
-- [Arduino UNO](/notes/board-and-microcontollers/arduino-uno.md)
-- [ESP8266](/notes/board-and-microcontollers/esp8266.md)
 
 ### Components
 - [Breadboard](/notes/components/breadboard.md)

@@ -3,6 +3,5 @@
 notes.md
 *.out
 
-projects/avr/test
-projects/micropython/test
+projects/test
 firmware
