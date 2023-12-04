@@ -68,3 +68,4 @@ Pin numbering is counter-clockwise. Notch in the package is at the top.
 | %e        | a floating point number in scientific notation     |
 | %E        | a floating point number in scientific notation     |
 | %%        | the % symbol                                       |
+| %lu       | long int                                           |

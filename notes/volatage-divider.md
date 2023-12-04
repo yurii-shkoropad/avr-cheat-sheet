@@ -7,7 +7,7 @@ The basic voltage divider circuit consists of two resistors, `R1` â€‹ and `R2` â
 
 ![Voltage divider equation](./assets/voltage-divider-equation.png)
 
-![Voltage divider equation resistor](./assets/voltage-divider-equation-r.png)
+![Voltage divider equation resistor](./assets/r2-voltage-divider.webp)
 
 Calculator [link](https://ohmslawcalculator.com/voltage-divider-calculator)
 
@@ -20,7 +20,7 @@ Calculator [link](https://ohmslawcalculator.com/voltage-divider-calculator)
 #include <avr/io.h>
 #include <util/delay.h>
 
-const uint8_t analogePinChannel = 0;
+const uint8_t analogPinChannel = 0;
 const float vcc = 5.0;
 
 void setup(void);
@@ -31,7 +31,7 @@ int main(void) {
   setup();
 
   while(1) {
-    float aValue = ADC_Read_Voltage(analogePinChannel, vcc);
+    float aValue = ADC_Read_Voltage(analogPinChannel, vcc);
 
     _delay_ms(1000);
   }
@@ -64,15 +64,15 @@ uint16_t ADC_Read(uint8_t channel) {
 }
 
 float ADC_Read_Voltage(uint8_t channel, float Vref) {
-    // Read the raw ADC value
-    uint16_t ADC_Value = ADC_Read(channel);
+  // Read the raw ADC value
+  uint16_t ADC_Value = ADC_Read(channel);
 
-    // ADC Resolution (e.g., 10 bits for most AVR microcontrollers)
-    const uint16_t ADC_Resolution = 1023;
+  // ADC Resolution (e.g., 10 bits for most AVR microcontrollers)
+  const uint16_t ADC_Resolution = 1023;
 
-    // Convert ADC value to voltage
-    float Voltage = (ADC_Value / (float)ADC_Resolution) * Vref;
+  // Convert ADC value to voltage
+  float Voltage = (ADC_Value / (float)ADC_Resolution) * Vref;
 
-    return Voltage;
+  return Voltage;
 }
 ```

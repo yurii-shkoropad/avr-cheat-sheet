@@ -35,6 +35,9 @@ The external interrupts are triggered by the INT0 and INT1 pins or any of the PC
 ## INT Interrupts
 These interrupts are triggered by a change in the state of the corresponding pin (rising or falling edge, or low level, depending on the configuration). `Atmega328P` has two `INT0` and `INT1` INT interrupts.
 
+- `INT0` - `PD2`;
+- `INT1` - `PD3`;
+
 ### Modes
 Use `EICRA` register to set `INT` interrupts.
 
@@ -81,6 +84,8 @@ int main(void) {
 void setupExternalInterrupt(void) {
   EIMSK |= 1 << INT0; // Enable INT0
   EICRA |= 1 << ISC01; // Set INT0 interruptions on falling edge
+
+  // EICRA |= _BV(ISC01) | _BV(ISC01); // Set INT0 interruptions on rising edge
 
   sei();
 } 
