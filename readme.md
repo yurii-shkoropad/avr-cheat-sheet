@@ -6,6 +6,7 @@
 - [External LED every second](/projects/external-led-every-second/readme.md)
 - [BCD Timer start stop](/projects/bcd-timer-start-stop/readme.md)
 - [Led Dimmer](/projects/led-dimmer/readme.md)
+- [Led Dimmer with Pot](/projects/led-dimmer-with-pot/readme.md)
 - [Counter](/projects/counter/readme.md)
 
 ## Notes 

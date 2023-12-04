@@ -11,7 +11,7 @@ Datasheet [link](./assets/arduino-uno-r3-datasheet.pdf).
 | D2          | PD2        |                      | INT0 | PCINT18 | PCMSK2 |      |             |
 | D3          | PD3        |                      | INT1 | PCINT19 | PCMSK2 |      |             |
 | D4          | PD4        |                      |      | PCINT20 | PCMSK2 |      |             |
-| D5          | PD5        |                      |      | PCINT21 | PCMSK2 |      |             |
+| D5          | PD5        |                      |      | PCINT21 | PCMSK2 | OC0B |             |
 | D6          | PD6        |                      |      | PCINT22 | PCMSK2 | OC0A |             |
 | D7          | PD7        |                      |      | PCINT23 | PCMSK2 |      |             |
 | D8          | PB0        |                      |      | PCINT0  | PCMSK0 |      |             |

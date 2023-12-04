@@ -165,5 +165,32 @@ Fast PWM is faster than phase correct PWM because fast PWM performs a single slo
 
 ![Fast PWM](./assets/fast-pwm.gif)
 
+```c
+#include <avr/io.h>
+
+const int ledPin = PD6;
+
+void setup(void);
+volatile int dutyCycleValue = 20; // 255 max
+
+void setupExternalInterrupt(void);
+
+int main(void) {
+  setup();
+
+  while (1);
+}
+
+void setup(void) {
+  DDRD |= _BV(ledPin);
+
+  TIMSK0 |= (1 << TOIE0); // timer 0 normal mode (8 bit)
+  TCCR0B |= (1 << CS02) | (1 << CS00); // Set prescaler to 1024
+
+  TCCR0A |= (1 << WGM00) | (1 << WGM01) | (1 << COM0A1); // FAST PWM
+  OCR0A = dutyCycleValue;
+}
+```
+
 ### Phase Correct PWM (non-Fast PWM)
 Phase correct PWM uses an up-then-down dual slope counting technique.

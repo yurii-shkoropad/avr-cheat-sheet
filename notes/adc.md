@@ -41,7 +41,7 @@ Code example in `voltage divider scheme`.
 #include <avr/io.h>
 #include <util/delay.h>
 
-const uint8_t analogePinChannel = 0;
+const uint8_t analogPinChannel = 0;
 const float vcc = 5.0;
 
 void setup(void);
@@ -52,7 +52,7 @@ int main(void) {
   setup();
 
   while(1) {
-    float aValue = ADC_Read_Voltage(analogePinChannel, vcc);
+    float aValue = ADC_Read_Voltage(analogPinChannel, vcc);
 
     _delay_ms(1000);
   }
