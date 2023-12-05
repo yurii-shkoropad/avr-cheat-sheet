@@ -31,3 +31,11 @@ In a rectifier circuit, AC voltage is converted to DC voltage. However, due to t
 ![smoothing](./assets/rectification-and-smoothing.webp)
 
 ![Smoothing capacitor circuit](./assets/smoothing-capacitor-circuit.png)
+
+## Bypass capacitors
+A bypass capacitor gets its name from bypassing AC noise in a DC signal. It can filter out noise to the degree of helping facilitate a clean DC signal. The DC signal in a transistor, for example, needs to be as pure as possible without AC ripple. However, power supplies that provide voltage to the circuit aren't always clean, so it's important to use a filtering device such as a bypass capacitor.
+
+## Decoupling capacitors
+The decoupling capacitor is mainly to remove the interference of high frequency such as RF signal, and the way of entering the interference is through electromagnetic radiation. 
+
+![decoupling capacitors](./assets/decoupling-capacitors.png)

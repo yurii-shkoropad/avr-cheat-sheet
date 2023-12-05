@@ -173,8 +173,6 @@ const int ledPin = PD6;
 void setup(void);
 volatile int dutyCycleValue = 20; // 255 max
 
-void setupExternalInterrupt(void);
-
 int main(void) {
   setup();
 
