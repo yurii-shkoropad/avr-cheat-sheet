@@ -37,6 +37,7 @@
 - [Shift register](/notes/components//shift-register.md)
 - [Led matrix](/notes/components/led-matrix.md)
 - [MAX7219](/notes/components/max7219.md)
+- [Battery holder](/notes/components/battery-holder.md)
 - [DHT22 Temperature/Humidity Sensor](/notes/components/dht22.md)
 - [Thermistor](/notes/components/thermistor.md)
 
