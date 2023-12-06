@@ -15,7 +15,7 @@ A polarized capacitor is a type of capacitor that has a specific polarity or dir
 ![polarized capacitor symbol 2](./assets/polarized-capacitor-symbol-2.png)
 
 ## Non-Polarized capacitor
-Non-polarized capacitors are capacitors that do not have a specific polarity; in other words, they can be connected to a circuit in either direction. Unlike polarized capacitors, non-polarized capacitors do not have a positive and a negative lead.
+Non-polarized capacitors are capacitors that do not have a specific polarity; in other words, they can be connected to a circuit in either direction. Unlike polarized capacitors, non-polarized capacitors do not have a positive and a negative lead. Ceramic capacitors are non-polarized.
 
 ![ceramic capacitor](./assets/ceramic-capacitor.jpeg)
 
@@ -39,3 +39,11 @@ A bypass capacitor gets its name from bypassing AC noise in a DC signal. It can 
 The decoupling capacitor is mainly to remove the interference of high frequency such as RF signal, and the way of entering the interference is through electromagnetic radiation. 
 
 ![decoupling capacitors](./assets/decoupling-capacitors.png)
+
+## Equivalent Series Resistance (ESR)
+The equivalent series resistance of a capacitor is the internal resistance that appears in series with the capacitance of the device. Almost all capacitors exhibit this property at varying degrees depending on the construction, dielectric materials, quality, and reliability of the capacitor. The equivalent series resistance (ESR) values range from a few milliohms to several ohms, and results into power losses, reduced efficiency, and instability of power supplies and regulators circuits.
+
+Ceramic capacitors has low ESR, but low capacitance.
+Electrolytic capacitors has high ESR, but high capacitance.
+
+It's recommended to mix both capacitors for best results.
