@@ -54,19 +54,19 @@ const uint8_t numbers[] = {
 };
 
 void setupPins(void);
-void drawDisplay(uint8_t data);
+void draw_display(uint8_t data);
 void shiftOut(uint8_t data);
 
 int main(void) {
   setupPins();
-  drawDisplay(numbers[4]);
+  draw_display(numbers[4]);
 }
 
 void setupPins(void) {
   DDRD |= _BV(dataPin) | _BV(sckPin) | _BV(latchPin);
 }
 
-void drawDisplay(uint8_t data) {
+void draw_display(uint8_t data) {
   shiftOut(data); // 7 segment with common anode, LSB
 
   PORTD |= _BV(latchPin);
@@ -120,12 +120,12 @@ const uint8_t numbers[] = {
 };
 
 void setup(void);
-void drawDisplay(uint8_t data);
-void SPI_MasterTransmit(uint8_t data);
+void draw_display(uint8_t data);
+void spi_master_transmit(uint8_t data);
 
 int main(void) {
   setup();
-  drawDisplay(numbers[7]);
+  draw_display(numbers[7]);
 }
 
 void setup(void) {
@@ -134,8 +134,8 @@ void setup(void) {
   SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR0); // Enable SPI, MSTR - MOSI, fck/16
 }
 
-void drawDisplay(uint8_t data) {
-  SPI_MasterTransmit(data); // 7 segment with common anode, LSB
+void draw_display(uint8_t data) {
+  spi_master_transmit(data); // 7 segment with common anode, LSB
 
   PORTB |= _BV(latchPin);
   _delay_us(1);
@@ -143,7 +143,7 @@ void drawDisplay(uint8_t data) {
   _delay_us(1);
 }
 
-void SPI_MasterTransmit(uint8_t data) {
+void spi_master_transmit(uint8_t data) {
   SPDR = data;
   while(bit_is_clear(SPSR, SPIF));
 }
