@@ -16,6 +16,8 @@
 - [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
 - [Arduino UNO](/notes/board-and-microcontollers/arduino-uno.md)
 - [General](/notes/general.md)
+- [C](/notes/c.md)
+- [Makefile](/notes/makefile.md)
 - [AVR Toolchain](/notes/avr-toolchain.md)
 - [Pins basic](/notes/pins-basic.md)
 - [Interrupts](/notes/interruptions.md)
