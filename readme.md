@@ -9,6 +9,7 @@
 - [Counter](/projects/counter/readme.md)
 - [Led Dimmer with Pot](/projects/led-dimmer-with-pot/readme.md)
 - [UART Resistance meter](/projects/uart-resistence-meter/readme.md)
+- [Scrolling text matrix](/projects/scrolling-text-matrix/readme.md)
 
 ## Notes 
 
@@ -20,13 +21,19 @@
 - [Makefile](/notes/makefile.md)
 - [AVR Toolchain](/notes/avr-toolchain.md)
 - [Pins basic](/notes/pins-basic.md)
-- [Interrupts](/notes/interruptions.md)
-- [Timer interruptions](/notes/timer-interruptions.md)
-- [External Interrupts](/notes/external-interruptions.md)
-- [SPI](/notes/spi.md)
 - [Analog to Digital Converter](/notes/adc.md)
 - [Voltage divider](/notes/volatage-divider.md)
-- [1 Wire](/notes/1-wire.md)
+
+### Protocols
+- [SPI](/notes/protocols/spi.md)
+- [UART](/notes/protocols/uart.md)
+- [I2C](/notes/protocols/i2c.md)
+- [1 Wire](/notes/protocols/1-wire.md)
+
+### Interrupts
+- [Interrupts](/notes/interrupts/interruptions.md)
+- [Timer interruptions](/notes/interrupts/timer-interruptions.md)
+- [External Interrupts](/notes/interrupts/external-interruptions.md)
 
 ### Components
 - [Breadboard](/notes/components/breadboard.md)
