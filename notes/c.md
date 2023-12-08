@@ -22,6 +22,12 @@ Here are the typical stages in the compilation process:
   snprintf(buffer, sizeof(buffer), "i=%d\r\n", i);
   printUSARTString(buffer);
 ```
+- `memcpy` - defined in `<string.h>`, copies content from source to target.
+```c
+int sourceArray[] = {1, 2, 3, 4, 5};
+int destinationArray[5];
+memcpy(destinationArray, sourceArray, 5 * sizeof(int));
+```
 
 ## Specifiers
 | Specifier | Used for                                           |
