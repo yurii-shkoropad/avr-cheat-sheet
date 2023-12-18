@@ -55,3 +55,6 @@ For example
 ```console
 $ avrdude -F -V -c arduino -p ATMEGA328P -P /dev/tty.usbmodem1421 -b 115200 -U flash:w:blink.hex
 ```
+
+## AVR lib
+Standard lib for avr [link](https://www.nongnu.org/avr-libc/user-manual/modules.html)

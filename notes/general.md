@@ -39,3 +39,16 @@ Dual In-line Package is an electronic component package with a rectangular housi
 Pin numbering is counter-clockwise. Notch in the package is at the top.
 
 ![dip numbering](assets/dip-numbpering.png)
+
+## Open drain
+It is very common in integrated circuits for output pins to be open drain. A datasheet for an IC will either state this for an output pin or show a functional circuit diagram with the output pin being internally connected to the otherwise `open drain`.
+
+Open drain outputs require a pull-up resistor for the output to be able to properly `output high`. The pull-up resistor is connected between the output pin and the output voltage that is desired for a high state.
+
+Without a pull-up resistor, the signal line would be left floating and could easily pick up stray electromagnetic interference, resulting in an undefined voltage level.
+
+If one of the connected devices pull down (sets pin in low level state) - `Vcc` goes to this pin and other pins will have logical low level on pins. High is idle state and low is active state.
+
+Used in `I2C` protocol.
+
+![open drain](./assets/open-drain.png)
