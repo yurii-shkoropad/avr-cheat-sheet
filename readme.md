@@ -14,18 +14,22 @@
 ## Notes 
 
 ### General
-- [Atmega328P](/notes/board-and-microcontollers/atmega-328p.md)
-- [Arduino UNO](/notes/board-and-microcontollers/arduino-uno.md)
 - [General](/notes/general.md)
 - [Pins basic](/notes/pins-basic.md)
 - [Analog to Digital Converter](/notes/adc.md)
 - [Voltage divider](/notes/volatage-divider.md)
+
 
 ### Programming
 - [C](/notes/programming/c.md)
 - [Bitwise operations](/notes/programming/bitwise-operations.md)
 - [Makefile](/notes/programming/makefile.md)
 - [AVR Toolchain](/notes/programming/avr-toolchain.md)
+
+### Boards and MCUs
+- [Atmega328P](/notes/boards-and-mcus/atmega-328p.md)
+- [Arduino UNO](/notes/boards-and-mcus/arduino-uno.md)
+- [Arduino NANO](/notes/boards-and-mcus/arduino-nano.md)
 
 ### Protocols
 - [SPI](/notes/protocols/spi.md)
