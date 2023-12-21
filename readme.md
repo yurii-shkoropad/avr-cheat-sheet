@@ -25,6 +25,7 @@
 - [Bitwise operations](/notes/programming/bitwise-operations.md)
 - [Makefile](/notes/programming/makefile.md)
 - [AVR Toolchain](/notes/programming/avr-toolchain.md)
+- [Bootloader](/notes/programming/bootloader.md)
 
 ### Boards and MCUs
 - [Atmega328P](/notes/boards-and-mcus/atmega-328p.md)

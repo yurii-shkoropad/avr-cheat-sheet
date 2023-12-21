@@ -7,7 +7,9 @@ When flashing firmware, need to specify serial port on which micro controller is
 - MacOS - `/dev/tty.usbmodem1421` or `/dev/tty.usbserial-2110`. On MacOs can be found with `ls /dev/tty.usb*`;
 
 ### USB UART Driver
-CP210x USB to UART Bridge VCP Drivers from Silabs [link](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads#software)
+- `CP210x` USB to UART Bridge VCP Drivers from Silabs [link](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads#software). For example `ESP32` has it.
+- `CH340` USB to UART drivers for macos [link](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver). For example `Arduino nano` has it.
+
 
 ## Baud rate 
 Baud rate - at which speed firmware will be flashed. Different micro controllers has different baud rates. 

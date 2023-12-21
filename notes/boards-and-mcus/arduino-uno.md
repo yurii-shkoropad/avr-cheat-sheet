@@ -8,6 +8,8 @@ Datasheet [link](./assets/arduino-uno-r3-datasheet.pdf).
 ## Pinout
 | Arduino pin | Atmega328P | Additional Functions | INT  | PCINT   | PCMSK  | PWM  | SPI         |
 | ----------- | ---------- | -------------------- | ---- | ------- | ------ | ---- | ----------- |
+| D0          | PD0        | RX                   |      |         |        |      |             |
+| D1          | PD1        | TX                   |      |         |        |      |             |
 | D2          | PD2        |                      | INT0 | PCINT18 | PCMSK2 |      |             |
 | D3          | PD3        |                      | INT1 | PCINT19 | PCMSK2 |      |             |
 | D4          | PD4        |                      |      | PCINT20 | PCMSK2 |      |             |
