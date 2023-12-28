@@ -54,3 +54,6 @@ Can be powered:
 Arduino UNO has built-in LED on PIN 13 (PB5)
 
 ![Built-in LED](./assets/built-in-led.jpg)
+
+## Baud rate
+115200

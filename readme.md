@@ -53,12 +53,14 @@
 - [7 segment display](/notes//components/seven-segment-display.md)
 - [Shift register](/notes/components//shift-register.md)
 - [Led matrix](/notes/components/led-matrix.md)
-- [MAX7219](/notes/components/max7219.md)
+- [MAX7219 Led driver](/notes/components/max7219.md)
 - [Battery holder](/notes/components/battery-holder.md)
 - [DHT22 Temperature/Humidity Sensor](/notes/components/dht22.md)
 - [Thermistor](/notes/components/thermistor.md)
 - [LCD 1602](/notes/components/lcd1602.md)
-- [DS18B20](/notes/components/ds18b20.md)
+- [DS18B20 Temperature sensor](/notes/components/ds18b20.md)
+- [DS18B20 Real time clock](/notes/components/ds18b20.md)
+- [Batteries](/notes/components/batteries.md)
 
 ## Useful tools
 - [Hex to Binary converter](https://www.rapidtables.com/convert/number/hex-to-binary.html)

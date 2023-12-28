@@ -127,17 +127,23 @@ print_port_number(&p1);
 ```
 
 ## Useful functions
-- `snprintf` - defined in `<stdio.h>`,  formats and stores a series of characters and values in the array buffer. Useful to get string with integer. Example:
+- `snprintf` - defined in `<stdio.h>`,  formats and stores a series of characters and values in the array buffer. Useful to get string with integer.
 ```c
   char buffer[30];
   snprintf(buffer, sizeof(buffer), "i=%d\r\n", i);
-  printUSARTString(buffer);
+  usart_print_string(buffer);
 ```
 - `memcpy` - defined in `<string.h>`, copies content from source to target.
 ```c
 int sourceArray[] = {1, 2, 3, 4, 5};
 int destinationArray[5];
 memcpy(destinationArray, sourceArray, 5 * sizeof(int));
+```
+- `itoa` - defined in `<stdlib.h>`, converts integer to string with specified radix (print number in binary for example).
+```c
+char buffer[10];
+itoa(seconds, buffer, 2);
+usart_print_string(buffer);
 ```
 
 ## Specifiers
